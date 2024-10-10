@@ -395,9 +395,8 @@ bool RTCInterface::isForceActivated(const UUID & uuid) const
     }
     if (itr->command_status.type == Command::ACTIVATE && !itr->safe) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   }
 
   RCLCPP_WARN_STREAM(
